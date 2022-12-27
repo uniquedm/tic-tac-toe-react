@@ -6,7 +6,11 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 class Square extends React.Component {
   render() {
     return (
-      <button className="square">
+      <button className="square" onClick = {
+        () => {
+          console.log("Square was Clicked!");
+        }
+      }>
         {
           this.props.value
         }
