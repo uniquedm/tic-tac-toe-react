@@ -4,15 +4,22 @@ import './index.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 class Square extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      draw: null
+    };
+  }
+
   render() {
     return (
       <button className="square" onClick = {
         () => {
-          console.log("Square was Clicked!");
+          this.setState({draw: 'O'})
         }
       }>
         {
-          this.props.value
+          this.state.draw
         }
       </button>
     );
